@@ -1,46 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Privacy Policy for Salesforce Case Highlighter</title>
-    <style>
-        body { font-family: sans-serif; line-height: 1.6; padding: 2em; }
-        h1 { color: #333; }
-    </style>
-</head>
-<body>
-    <h1>Privacy Policy for Salesforce Case Highlighter</h1>
-    <p><strong>Last Updated:</strong> August 12, 2025</p>
+# Privacy Policy for Salesforce Case Highlighter
 
-    <h2>Introduction</h2>
-    <p>This privacy policy outlines the data practices for the "Salesforce Case Highlighter" Chrome Extension. We are committed to protecting your privacy. This extension is designed to function entirely on your browser without collecting or transmitting any of your personal data.</p>
-    
-    <h2>Data We Do Not Collect</h2>
-    <p>We do not collect, store, or transmit any personally identifiable information (PII). This includes, but is not limited to:</p>
-    <ul>
-        <li>Your name, email address, or user credentials.</li>
-        <li>Your Browse history.</li>
-        <li>Any data from your Salesforce account or the pages you visit.</li>
-    </ul>
+**Last Updated:** August 20, 2025
 
-    <h2>Data We Use</h2>
-    <p>The extension's functionality relies on two types of data that are stored locally on your computer or synced to your own Google account:</p>
-    <ul>
-        <li><strong>User-Configured Settings:</strong> To provide a customized experience, the extension saves your preferred rules and color choices (e.g., breach hours, highlight colors). These settings are saved using the `chrome.storage.sync` API, which syncs them to your personal Google account so your settings are consistent across your browsers. We, the developers, have no access to this data.</li>
-        <li><strong>Page Content Interaction:</strong> The extension has permission to read and modify the content of your active Salesforce tab to highlight cases according to your rules. This process is done entirely within your browser and no information about the page content is ever saved or transmitted.</li>
-    </ul>
+## Introduction
+This privacy policy outlines the data practices for the "Salesforce Case Highlighter" Chrome Extension. We are committed to protecting your privacy. This extension is designed to function entirely within your browser without collecting or transmitting any of your personal data.
 
-    <h2>Permissions</h2>
-    <p>The extension requires the following permissions to function:</p>
-    <ul>
-        <li><strong>storage:</strong> To save your custom settings.</li>
-        <li><strong>activeTab:</strong> To run the highlighting logic on the current Salesforce page.</li>
-    </ul>
+## Data We Do Not Collect
+We do not collect, store, or transmit any personally identifiable information (PII). This includes, but is not limited to:
+* Your name, email address, or user credentials
+* Your browsing history or website data
+* Any data from your Salesforce account, cases, or customer information
+* Any information about the pages you visit
+* Usage analytics or tracking data
 
-    <h2>Changes to This Policy</h2>
-    <p>We may update this privacy policy in the future. Any changes will be reflected in the updated extension in the Chrome Web Store.</p>
+## Data We Use
+The extension's functionality relies on two types of data that are stored locally on your computer or synced to your own Google account:
 
-    <h2>Contact Us</h2>
-    <p>If you have any questions about this privacy policy, please contact us through the support section of the extension's Chrome Web Store page.</p>
-</body>
-</html>
+* **User-Configured Settings:** To provide a customized experience, the extension saves your preferred highlighting rules and color choices (e.g., breach hour thresholds, highlight colors, configured list view URL). These settings are saved using the `chrome.storage.sync` API, which syncs them to your personal Google account so your settings are consistent across your browsers. We, the developers, have no access to this data.
+
+* **Page Content Interaction:** The extension reads the content of your active Salesforce Case list view tab to identify case information (priority, status, breach times, etc.) and apply visual highlighting according to your configured rules. This process is done entirely within your browser, and no information about the page content is ever saved, stored, or transmitted outside your browser.
+
+## Permissions
+The extension requires the following minimal permissions to function:
+
+* **storage:** To save your custom highlighting rules and preferences locally
+* **activeTab:** To read and highlight case information on the current Salesforce page when you click the extension
+* **scripting:** To inject highlighting functionality into Salesforce pages and apply visual modifications
+* **tabs:** To manage extension functionality across Salesforce tabs and reload tabs after configuration changes
+* **notifications:** To show helpful setup reminders and welcome messages (optional, can be disabled in browser settings)
+
+## Host Permissions
+The extension requires access to Salesforce domains (*.salesforce.com, *.force.com, *.lightning.force.com) to provide highlighting functionality on your Salesforce Case list views. This access is used only to enhance the visual display of your existing Salesforce data and does not collect or transmit any information.
+
+## Data Security
+All extension functionality occurs locally in your browser. No data is sent to external servers, third parties, or our se
