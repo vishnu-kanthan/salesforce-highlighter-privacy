@@ -212,47 +212,23 @@
             font-size: 14px;
         }
         
-        .contact-button {
-            display: inline-block;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            color: white;
-            padding: 12px 24px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            margin-top: 15px;
-            transition: all 0.3s ease;
-        }
-        
-        .contact-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
-            color: white;
-            text-decoration: none;
-        }
-        
         @media (max-width: 768px) {
             .container {
                 margin: 10px;
                 border-radius: 12px;
             }
-            
             .header {
                 padding: 30px 20px;
             }
-            
             .header h1 {
                 font-size: 24px;
             }
-            
             .content {
                 padding: 30px 20px;
             }
-            
             .permission-grid {
                 grid-template-columns: 1fr;
             }
-            
             .footer {
                 padding: 20px;
             }
@@ -263,16 +239,16 @@
     <div class="container">
         <div class="header">
             <h1>Privacy Policy</h1>
-            <p>Salesforce Case Highlighter Chrome Extension</p>
+            <p>sfch (Salesforce Case Highlighter) Chrome Extension</p>
         </div>
         
         <div class="content">
             <div class="last-updated">
-                <strong>Last Updated:</strong> August 20, 2025
+                <strong>Last Updated:</strong> August 25, 2025
             </div>
             
             <h2>Introduction</h2>
-            <p>This privacy policy outlines the data practices for the "Salesforce Case Highlighter" Chrome Extension. We are committed to protecting your privacy. This extension is designed to function entirely within your browser without collecting or transmitting any of your personal data.</p>
+            <p>This privacy policy outlines the data practices for the "sfch (Salesforce Case Highlighter)" Chrome Extension. We are committed to protecting your privacy. This extension is designed to organize and highlight your Salesforce cases entirely within your browser without collecting or transmitting any of your personal data.</p>
             
             <h2>Data We Do Not Collect</h2>
             <p>We do not collect, store, or transmit any personally identifiable information (PII). This includes, but is not limited to:</p>
@@ -287,38 +263,30 @@
             <h2>Data We Use</h2>
             <p>The extension's functionality relies on two types of data that are stored locally on your computer or synced to your own Google account:</p>
             
-            <p><strong>User-Configured Settings:</strong> To provide a customized experience, the extension saves your preferred highlighting rules and color choices (e.g., breach hour thresholds, highlight colors, configured list view URL). These settings are saved using the <code>chrome.storage.sync</code> API, which syncs them to your personal Google account so your settings are consistent across your browsers. We, the developers, have no access to this data.</p>
+            <p><strong>User-Configured Settings:</strong> To provide a customized experience, the extension saves your preferred rules and feature states (e.g., breach hour thresholds, highlight colors, configured list view URL, and on/off toggles for highlighting and grouping). These settings are saved using the <code>chrome.storage.sync</code> API, which syncs them to your personal Google account so your settings are consistent across your browsers. We, the developers, have no access to this data.</p>
             
-            <p><strong>Page Content Interaction:</strong> The extension reads the content of your active Salesforce Case list view tab to identify case information (priority, status, breach times, etc.) and apply visual highlighting according to your configured rules. This process is done entirely within your browser, and no information about the page content is ever saved, stored, or transmitted outside your browser.</p>
+            <p><strong>Page Content Interaction:</strong> The extension reads the content of your active Salesforce Case list view tab to identify case information (priority, status, breach times, etc.). It uses this information to apply visual highlighting and to physically reorder rows into priority groups according to your configured rules. This process is done entirely within your browser, and no information about the page content is ever saved, stored, or transmitted outside your browser.</p>
             
-            <h2>Permissions</h2>
-            <p>The extension requires the following minimal permissions to function:</p>
+            <h2>Permissions Required</h2>
+            <p>The extension requests the following minimal permissions to function:</p>
             
             <div class="permission-grid">
                 <div class="permission-card">
                     <h3>storage</h3>
-                    <p>To save your custom highlighting rules and preferences locally</p>
+                    <p>To save your custom rules, color preferences, and feature toggle states locally.</p>
                 </div>
                 <div class="permission-card">
                     <h3>activeTab</h3>
-                    <p>To read and highlight case information on the current Salesforce page when you click the extension</p>
+                    <p>Allows the popup dashboard to request real-time statistics from the Salesforce page when you click the extension icon.</p>
                 </div>
                 <div class="permission-card">
                     <h3>scripting</h3>
-                    <p>To inject highlighting functionality into Salesforce pages and apply visual modifications</p>
-                </div>
-                <div class="permission-card">
-                    <h3>tabs</h3>
-                    <p>To manage extension functionality across Salesforce tabs and reload tabs after configuration changes</p>
-                </div>
-                <div class="permission-card">
-                    <h3>notifications</h3>
-                    <p>To show helpful setup reminders and welcome messages (optional, can be disabled in browser settings)</p>
+                    <p>Used for the one-click setup process to validate columns and detect your user alias on the page.</p>
                 </div>
             </div>
             
             <h2>Host Permissions</h2>
-            <p>The extension requires access to Salesforce domains (*.salesforce.com, *.force.com, *.lightning.force.com) to provide highlighting functionality on your Salesforce Case list views. This access is used only to enhance the visual display of your existing Salesforce data and does not collect or transmit any information.</p>
+            <p>The extension requires access to Salesforce domains (specifically `*/lightning/o/Case/list*` URLs) to provide its core functionality. This access is strictly limited to Case list view pages and is used only to read case data and apply visual enhancements (grouping and highlighting). The extension does not run on or have access to any other Salesforce pages or other websites.</p>
             
             <div class="highlight-box">
                 <h3>Data Security</h3>
@@ -331,11 +299,10 @@
             <h2>Contact Us</h2>
             <p>If you have any questions about this privacy policy or the extension's data practices, please contact us through the support section of the extension's Chrome Web Store page.</p>
             
-            <a href="#" class="contact-button">Contact Support</a>
         </div>
         
         <div class="footer">
-            <p>&copy; 2025 Salesforce Case Highlighter. All rights reserved.</p>
+            <p>&copy; 2025 sfch (Salesforce Case Highlighter). All rights reserved.</p>
             <p>This extension is not affiliated with Salesforce.com, Inc.</p>
         </div>
     </div>
